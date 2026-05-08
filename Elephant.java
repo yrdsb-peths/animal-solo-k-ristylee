@@ -9,6 +9,29 @@
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephant.mp3");
+    GreenfootImage[] idle = new GreenfootImage[8];
+    
+    /**
+     * Constructor - The code that gets run one time when object is created
+     */
+    public Elephant()
+    {
+        for(int i = 0; i < 8; i++)
+        {
+            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png"); 
+        }
+        setImage(idle[0]);
+    }
+    
+    /**
+     * Animate the elephant.
+     */
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
     
     public void act()
     {
@@ -22,6 +45,9 @@ public class Elephant extends Actor
         }
         
         eat();
+        
+        // Animate the elephant.
+        animateElephant();
     }
     
     /**
