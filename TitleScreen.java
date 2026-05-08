@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
  * Title Screen
  * 
@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
-    Label titleLabel = new Label("Hungry Elephant", 55);
+    Label titleLabel = new Label("Hungry Elephant", 60);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -18,7 +18,7 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
 
-        addObject(titleLabel, 230, 65);
+        addObject(titleLabel, 300, 90);
         prepare();
     }
 
@@ -42,13 +42,13 @@ public class TitleScreen extends World
     private void prepare()
     {
         Elephant elephant = new Elephant();
-        addObject(elephant, 495, 82);
+        addObject(elephant, 300, 185);
         
-        Label label = new Label("Use \u2190 and \u2192 to Move", 30);
-        addObject(label, 175, 115);
+        Label label = new Label("Use \u2190 and \u2192 to Move", 35);
+        addObject(label, 300, 275);
         
         Label label2 = new Label("Press <space> to Start", 40);
-        addObject(label2, 300, 350);
+        addObject(label2, 300, 315);
     }
 }
 
