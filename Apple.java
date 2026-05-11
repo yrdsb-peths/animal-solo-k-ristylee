@@ -12,8 +12,8 @@ public class Apple extends Actor
     public Apple()
     {
         GreenfootImage apple = new GreenfootImage("apple.png");
-        setImage("apple.png");
-        apple.scale(20, 20);
+        apple.scale(40, 40);
+        setImage(apple);
     }
     
     public void act()
